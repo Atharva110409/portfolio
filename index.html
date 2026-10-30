@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atharva Gangurde — AI & Data Science Developer | 3D Creative Portfolio</title>
+  <meta name="description" content="Cinematic 3D developer portfolio of Atharva Gangurde — AI & Data Science undergraduate exploring machine learning, explainable AI, edge NLP speech pipelines, and astronomical clustering.">
+  <meta name="theme-color" content="#050508">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Atharva Gangurde — AI & Data Science Developer">
+  <meta property="og:description" content="Building intelligent things for the real world through machine learning, computer vision, and data-driven systems.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Atmospheric Noise Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Ambient Blurred Glowing Orbs -->
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-3" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION
+       ========================================================================== -->
+  <header class="site-nav" role="banner">
+    <nav class="nav-pill" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="Atharva Gangurde Home">
+        <span class="brand-logo-mark">AG</span>
+        <span>Atharva</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#stack" class="nav-link">Tech Stack</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="https://github.com/Atharva110409" target="_blank" rel="noopener noreferrer" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         HERO SECTION (3D CHARACTER IN THE SPOTLIGHT)
+         ========================================================================== -->
+    <section id="hero" class="hero-section" aria-label="Introduction and 3D Showcase">
+      <div id="hero-canvas-container" class="hero-canvas-container">
+        <canvas id="hero-canvas"></canvas>
+      </div>
+
+      <div class="container hero-grid">
+        <!-- Left Side: Spatial Anchor for 3D Character Mascot -->
+        <div class="hero-character-stage">
+          <div class="character-badge" aria-label="Mascot status indicator">
+            <span class="status-ping"></span>
+            <span>ATHARVA // 3D MASCOT &bull; ONLINE</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Identity, Headline & Primary CTAs -->
+        <div class="hero-content">
+          <div class="hero-role">AI &amp; DATA SCIENCE UNDERGRADUATE</div>
+
+          <h1 class="hero-identity">
+            ATHARVA <span>GANGURDE</span>
+          </h1>
+
+          <h2 class="hero-headline">
+            Building intelligent things for the real world.
+          </h2>
+
+          <p class="hero-supporting">
+            I explore machine learning, intelligent applications, and data-driven problem-solving through practical projects.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#work" class="btn btn-primary" id="hero-explore-btn">
+              <span>EXPLORE MY WORK</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <a href="https://github.com/Atharva110409" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-github-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GITHUB PROFILE</span>
+            </a>
+          </div>
+
+          <div class="hero-telemetry">
+            <div class="telemetry-item">
+              <span class="telemetry-val">Andrew Ng</span>
+              <span class="telemetry-label">ML Specialization</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-val">B.Tech &rsquo;28</span>
+              <span class="telemetry-label">AI &amp; Data Science</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-val">SIH 2026</span>
+              <span class="telemetry-label">AYOVANI Team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>SCROLL DOWN</span>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT SECTION
+         ========================================================================== -->
+    <section id="about" class="about-section" aria-label="About Atharva Gangurde">
+      <div class="container">
+        <div class="section-label">
+          <span class="pulse-dot"></span>
+          <span>A LITTLE ABOUT THE PERSON BEHIND THE CODE</span>
+        </div>
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p>
+              I&rsquo;m an <strong>AI &amp; Data Science undergraduate</strong> interested in building intelligent applications, exploring machine learning, and finding useful patterns in data.
+            </p>
+            <p>
+              Through practical projects, I experiment with different approaches and learn how AI systems can solve real problems &mdash; from detecting extreme financial fraud in imbalanced credit streams to architecting offline speech translation for underserved tribal languages.
+            </p>
+            <p>
+              I have completed <strong>Andrew Ng&rsquo;s Machine Learning Specialization</strong> (Stanford Online &amp; DeepLearning.AI), building rigorous foundations in supervised learning, advanced neural architectures, unsupervised clustering, and production engineering practices.
+            </p>
+
+            <div class="about-highlight-box">
+              <h3 class="about-highlight-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                Core Engineering Philosophy
+              </h3>
+              <p class="about-highlight-desc">
+                Machine learning models are only as good as their real-world impact. I prioritize <em>model explainability (SHAP)</em>, <em>realistic evaluation metrics (F1-score over misleading accuracy)</em>, and <em>computational efficiency (quantized on-device edge AI)</em>.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-visual-card">
+            <div class="focus-pill-list">
+              <div class="focus-pill">
+                <div class="focus-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                </div>
+                <div class="focus-info">
+                  <h4>Machine Learning &amp; Tabular AI</h4>
+                  <p>Ensemble architectures, XGBoost, Random Forest, SHAP</p>
+                </div>
+              </div>
+
+              <div class="focus-pill">
+                <div class="focus-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <div class="focus-info">
+                  <h4>Edge NLP &amp; Speech Systems</h4>
+                  <p>IndicTrans2, IndicConformer, ONNX Runtime INT8</p>
+                </div>
+              </div>
+
+              <div class="focus-pill">
+                <div class="focus-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                </div>
+                <div class="focus-info">
+                  <h4>Unsupervised Astronomical Data</h4>
+                  <p>K-Means, HDBSCAN, UMAP, Gaia DR3 Catalogue</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LEARNING JOURNEY SECTION
+         ========================================================================== -->
+    <section id="journey" class="learning-section" aria-label="Learning Journey and Milestones">
+      <div class="container">
+        <div class="section-label">
+          <span class="pulse-dot"></span>
+          <span>ACADEMIC &amp; TECHNICAL PROGRESSION</span>
+        </div>
+        <h2 class="section-title">Learning Journey</h2>
+        <p class="section-subtitle">
+          Verified academic milestones, certifications, and project research paths.
+        </p>
+
+        <div class="timeline">
+          <!-- Item 1: B.Tech -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-year">EXPECTED 2028</span>
+                <span class="timeline-tag">Undergraduate Degree</span>
+              </div>
+              <h3 class="timeline-title">B.Tech in Artificial Intelligence &amp; Data Science</h3>
+              <div class="timeline-org">Four-Year Engineering Curriculum</div>
+              <p class="timeline-desc">
+                Coursework encompassing linear algebra, multivariate calculus, probability &amp; statistics, data structures, algorithms, database management, and machine learning systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Andrew Ng ML Specialization -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-year">VERIFIED CERTIFICATION</span>
+                <span class="timeline-tag">DeepLearning.AI &bull; Stanford Online</span>
+              </div>
+              <h3 class="timeline-title">Machine Learning Specialization</h3>
+              <div class="timeline-org">Instructor: Andrew Ng</div>
+              <p class="timeline-desc">
+                Completed the three-course curriculum: Supervised Machine Learning (Linear &amp; Logistic Regression), Advanced Learning Algorithms (Neural Networks, Decision Trees, Random Forests), and Unsupervised Learning, Recommenders &amp; Reinforcement Learning.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: SIH 2026 AYOVANI -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-year">SIH 2026</span>
+                <span class="timeline-tag">National Hackathon Project</span>
+              </div>
+              <h3 class="timeline-title">Project AYOVANI &mdash; Edge AI Mother-Tongue Education</h3>
+              <div class="timeline-org">Team Engineering Collaboration</div>
+              <p class="timeline-desc">
+                Architected an offline-first speech translation system bridging Hindi and Mundari for educational settings with zero connectivity. Investigated INT8 quantization, IndicConformer ASR, and sub-2.5s time-to-first-audio on memory-constrained devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROJECT SHOWCASE (THE MAIN PORTFOLIO EXPERIENCE)
+         ========================================================================== -->
+    <section id="work" class="projects-section" aria-label="Featured Engineering Projects">
+      <div class="container">
+        <div class="section-label">
+          <span class="pulse-dot"></span>
+          <span>EXPERIMENTS AND IDEAS BROUGHT TO LIFE THROUGH CODE</span>
+        </div>
+        <h2 class="section-title">My Work</h2>
+        <p class="section-subtitle">
+          Three primary machine learning systems engineered with distinct mathematical paradigms, architectures, and real-time interactive 3D visualizations.
+        </p>
+
+        <div class="projects-stack">
+          <!-- ================================================================
+               PROJECT 01: FRAUDGUARD AI
+               ================================================================ -->
+          <article class="project-feature" id="project-fraudguard">
+            <div class="project-info">
+              <div class="project-index">PROJECT 01 // FINANCIAL INTELLIGENCE</div>
+              <div class="project-category">MACHINE LEARNING / FINANCIAL TECHNOLOGY</div>
+              <h3 class="project-title">Credit Card Fraud Detection &mdash; FraudGuard AI</h3>
+
+              <p class="project-description">
+                An explainable machine learning system designed to identify potentially fraudulent credit card transactions in highly imbalanced financial data.
+              </p>
+
+              <div class="tech-pill-group">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">scikit-learn</span>
+                <span class="tech-pill">XGBoost</span>
+                <span class="tech-pill">SHAP</span>
+                <span class="tech-pill">Streamlit</span>
+                <span class="tech-pill">RobustScaler</span>
+              </div>
+
+              <div class="project-metrics-grid">
+                <div class="metric-cell">
+                  <span class="metric-num">284,807</span>
+                  <span class="metric-desc">Transactions Analyzed</span>
+                </div>
+                <div class="metric-cell">
+                  <span class="metric-num highlight-blue">0.17%</span>
+                  <span class="metric-desc">Base Fraud Rate</span>
+                </div>
+                <div class="metric-cell">
+                  <span class="metric-num highlight-green">0.85 F1</span>
+                  <span class="metric-desc">Precision: 0.96 &bull; Recall: 0.76</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/Atharva110409/Credit_Card_Fraud_Detection" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>VIEW REPOSITORY</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Visual Canvas (Simulated Illustrative Architecture) -->
+            <div class="project-visual-wrapper">
+              <div class="visual-hud-header">
+                <div class="hud-status">
+                  <span class="hud-status-dot"></span>
+                  <span>SIMULATED TRANSACTION STREAM // ILLUSTRATIVE MODEL VISUALIZATION</span>
+                </div>
+                <div class="hud-actions">
+                  <button class="hud-btn" id="fraud-inject-btn">+ SIMULATE TRANSACTION</button>
+                  <button class="hud-btn active" id="fraud-toggle-btn">BOUNDARY</button>
+                </div>
+              </div>
+
+              <div class="hud-disclaimer">
+                Interactive client simulation illustrating Random Forest decision boundaries &amp; SHAP contributions. Production model is trained in scikit-learn / Python.
+              </div>
+
+              <div id="fraud-canvas-area" class="canvas-interactive-area">
+                <canvas id="fraud-canvas"></canvas>
+              </div>
+
+              <div class="visual-hud-footer">
+                <span>BENCHMARK DATA: <strong id="fraud-counter-eval" style="color:#f8fafc">284,807</strong></span>
+                <span>ACTUAL ANOMALIES: <strong id="fraud-counter-flagged" style="color:#f43f5e">492 (0.17%)</strong></span>
+                <span>MODEL FALSE POSITIVES: <strong style="color:#38bdf8">3 / ~57,000</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               PROJECT 02: AYOVANI
+               ================================================================ -->
+          <article class="project-feature reversed" id="project-ayovani">
+            <div class="project-info">
+              <div class="project-index">PROJECT 02 // EDGE AI &amp; NLP</div>
+              <div class="project-category">NATURAL LANGUAGE PROCESSING / EDGE AI / EDUCATIONAL TECH</div>
+              <h3 class="project-title">AYOVANI &mdash; Offline AI Speech Translation for Mother-Tongue Education</h3>
+
+              <p class="project-description">
+                An offline-first speech translation project designed to support bidirectional Hindi&ndash;Mundari communication in educational settings with limited connectivity. Engineered as an SIH 2026 team project.
+              </p>
+
+              <div class="tech-pill-group">
+                <span class="tech-pill">IndicTrans2</span>
+                <span class="tech-pill">IndicConformer</span>
+                <span class="tech-pill">Piper TTS</span>
+                <span class="tech-pill">ONNX Runtime</span>
+                <span class="tech-pill">INT8 Quantization</span>
+                <span class="tech-pill">Flutter</span>
+                <span class="tech-pill">Gemini LLM</span>
+              </div>
+
+              <div class="project-metrics-grid">
+                <div class="metric-cell">
+                  <span class="metric-num">39,820</span>
+                  <span class="metric-desc">Expanded Sentence Pairs</span>
+                </div>
+                <div class="metric-cell">
+                  <span class="metric-num highlight-blue">2.05s</span>
+                  <span class="metric-desc">Time-To-First-Audio</span>
+                </div>
+                <div class="metric-cell">
+                  <span class="metric-num highlight-green">183&ndash;347 MB</span>
+                  <span class="metric-desc">Working RAM (&lt;400 MB SLA)</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary" id="ayovani-inspect-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <span>INSPECT ARCHITECTURE</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Visual Pipeline Canvas -->
+            <div class="project-visual-wrapper">
+              <div class="visual-hud-header">
+                <div class="hud-status">
+                  <span class="hud-status-dot"></span>
+                  <span>AYOVANI PIPELINE // INT8 ONNX RUNTIME</span>
+                </div>
+                <div class="hud-actions">
+                  <button class="hud-btn" id="ayovani-sim-btn">▶ RUN PIPELINE</button>
+                  <button class="hud-btn" id="ayovani-switch-btn">⇄ SWITCH DIRECTION</button>
+                </div>
+              </div>
+
+              <div class="pipeline-diagram-container">
+                <!-- 5-Stage Visual Workflow -->
+                <div class="pipeline-nodes-flow">
+                  <div class="pipeline-node" id="pnode-0">
+                    <div class="pipeline-node-icon">🎙️</div>
+                    <span class="pipeline-node-label">Voice</span>
+                    <span class="pipeline-node-sub">PCM Audio</span>
+                  </div>
+                  <div class="pipeline-connector-line"></div>
+
+                  <div class="pipeline-node" id="pnode-1">
+                    <div class="pipeline-node-icon">📝</div>
+                    <span class="pipeline-node-label">Conformer</span>
+                    <span class="pipeline-node-sub">ASR Tokens</span>
+                  </div>
+                  <div class="pipeline-connector-line"></div>
+
+                  <div class="pipeline-node" id="pnode-2">
+                    <div class="pipeline-node-icon">🔄</div>
+                    <span class="pipeline-node-label">IndicTrans2</span>
+                    <span class="pipeline-node-sub">INT8 NMT</span>
+                  </div>
+                  <div class="pipeline-connector-line"></div>
+
+                  <div class="pipeline-node" id="pnode-3">
+                    <div class="pipeline-node-icon">🔊</div>
+                    <span class="pipeline-node-label">Piper TTS</span>
+                    <span class="pipeline-node-sub">Waveform</span>
+                  </div>
+                  <div class="pipeline-connector-line"></div>
+
+                  <div class="pipeline-node" id="pnode-4">
+                    <div class="pipeline-node-icon">📢</div>
+                    <span class="pipeline-node-label">Spoken</span>
+                    <span class="pipeline-node-sub">Audio Out</span>
+                  </div>
+                </div>
+
+                <!-- Real-time Animated Waveform Canvas -->
+                <div id="ayovani-canvas-area" style="width:100%; height:140px; margin-top:1rem;">
+                  <canvas id="ayovani-canvas"></canvas>
+                </div>
+
+                <!-- Verified Bilingual Architecture Display -->
+                <div class="ayovani-preview-card">
+                  <div class="trans-pair">
+                    <span class="trans-lang" id="ayovani-src-lang">Hindi Spoken Instruction (hin_Deva)</span>
+                    <span class="trans-text" id="ayovani-src-text">Teacher classroom speech captured via on-device microphone (16 kHz PCM audio stream)</span>
+                  </div>
+                  <div class="trans-divider"></div>
+                  <div class="trans-pair">
+                    <span class="trans-lang" id="ayovani-tgt-lang">Mundari Synthesized Speech (mun_Deva)</span>
+                    <span class="trans-text" id="ayovani-tgt-text">Piper-VITS edge synthesis outputting spoken Mundari audio based on Devanagari orthography</span>
+                  </div>
+                  <div class="ayovani-script-note" id="ayovani-script-note" style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim); margin-top:0.4rem; border-top:1px dashed var(--border-subtle); padding-top:0.5rem;">
+                    Mundari script representation: Devanagari (mun_Deva) via Karya Tribal Parallel Corpus (19,910 clean pairs). Unverified translations omitted.
+                  </div>
+                </div>
+              </div>
+
+              <div class="visual-hud-footer">
+                <span>DEPLOYMENT: <strong>ON-DEVICE OFFLINE</strong></span>
+                <span>MEASURED TTFA: <strong style="color:#38bdf8">2.05 &ndash; 2.45s</strong></span>
+                <span>PEAK MODEL RAM: <strong style="color:#10b981">183 &ndash; 347 MB</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               PROJECT 03: STELLAR POPULATION CLUSTERING WITH GAIA DR3
+               ================================================================ -->
+          <article class="project-feature" id="project-stellar">
+            <div class="project-info">
+              <div class="project-index">PROJECT 03 // ASTRONOMICAL DATA SCIENCE</div>
+              <div class="project-category">UNSUPERVISED LEARNING / ASTRONOMICAL DATA ANALYSIS</div>
+              <h3 class="project-title">Stellar Population Clustering with Gaia DR3</h3>
+
+              <p class="project-description">
+                An unsupervised machine-learning project exploring stellar populations using astronomical data from the Gaia DR3 catalogue.
+              </p>
+
+              <div class="tech-pill-group">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Astroquery</span>
+                <span class="tech-pill">scikit-learn</span>
+                <span class="tech-pill">K-Means</span>
+                <span class="tech-pill">HDBSCAN</span>
+                <span class="tech-pill">UMAP</span>
+              </div>
+
+              <div class="project-metrics-grid">
+                <div class="metric-cell">
+                  <span class="metric-num">4,959</span>
+                  <span class="metric-desc">Cleaned Stars Analyzed</span>
+                </div>
+                <div class="metric-cell">
+                  <span class="metric-num highlight-blue">5 Clusters</span>
+                  <span class="metric-desc">Elbow &amp; K-Means</span>
+                </div>
+                <div class="metric-cell">
+                  <span class="metric-num highlight-green">HDBSCAN</span>
+                  <span class="metric-desc">Outlier Density Separation</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/Atharva110409/stellar-clustering" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GITHUB REPO</span>
+                </a>
+
+                <a href="https://atharva110409-stellar-clustering-app-ddtulj.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>LIVE DEMO</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 3D Stellar Three.js Canvas -->
+            <div class="project-visual-wrapper">
+              <div class="visual-hud-header">
+                <div class="hud-status">
+                  <span class="hud-status-dot"></span>
+                  <span>GAIA DR3 // 3D STELLAR FEATURE SPACE</span>
+                </div>
+                <div class="hud-actions">
+                  <button class="hud-btn stellar-filter-btn active" data-cluster="-1">ALL</button>
+                  <button class="hud-btn stellar-filter-btn" data-cluster="0">C0</button>
+                  <button class="hud-btn stellar-filter-btn" data-cluster="1">C1</button>
+                  <button class="hud-btn stellar-filter-btn" data-cluster="2">C2</button>
+                  <button class="hud-btn stellar-filter-btn" data-cluster="3">C3</button>
+                  <button class="hud-btn stellar-filter-btn" data-cluster="4">C4</button>
+                  <button class="hud-btn stellar-filter-btn" data-cluster="5">HDBSCAN NOISE</button>
+                </div>
+              </div>
+
+              <div id="stellar-canvas-area" class="canvas-interactive-area">
+                <canvas id="stellar-canvas"></canvas>
+              </div>
+
+              <div class="visual-hud-footer">
+                <span id="stellar-filter-info">Showing all 4,959 stars clustered across 5 unsupervised K-Means populations + HDBSCAN density separation.</span>
+                <span style="color:#c084fc">DRAG TO ORBIT 3D CLOUD</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TECH STACK SECTION (FLOATING 3D SPHERES)
+         ========================================================================== -->
+    <section id="stack" class="tech-stack-section" aria-label="Technology Stack and Tooling">
+      <div class="container">
+        <div class="section-label">
+          <span class="pulse-dot"></span>
+          <span>THE TOOLS I USE TO EXPLORE, BUILD, AND EXPERIMENT</span>
+        </div>
+        <h2 class="section-title">My Tech Stack</h2>
+        <p class="section-subtitle">
+          An interactive 3D installation of floating technology spheres. Drag to orbit the constellation or hover over any sphere to inspect its role.
+        </p>
+
+        <!-- 3D Three.js Interactive Stage -->
+        <div id="tech-stage-container" class="tech-stage-container">
+          <canvas id="tech-canvas"></canvas>
+
+          <div class="tech-stage-hint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            <span>DRAG TO ROTATE &bull; HOVER TO INSPECT</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </div>
+
+          <!-- Floating Interactive HUD -->
+          <div class="tech-hud-overlay" id="tech-hud">
+            <h3 class="tech-hud-name" id="tech-hud-name">Python</h3>
+            <div class="tech-hud-category" id="tech-hud-category">Core Language</div>
+            <p class="tech-hud-desc" id="tech-hud-desc">
+              Primary programming language for end-to-end machine learning, data engineering, statistical modeling, and API integrations.
+            </p>
+            <div class="tech-hud-projects" id="tech-hud-projects">
+              Applied in: FraudGuard AI, AYOVANI, Gaia DR3 Clustering
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessible Categorized Grid (For Mobile & Screen Readers) -->
+        <div class="tech-grid-cards">
+          <div class="tech-category-card">
+            <h3 class="tech-category-title">
+              <span style="color:#38bdf8">●</span> Machine Learning
+            </h3>
+            <div class="tech-chips-list">
+              <span class="tech-pill">scikit-learn</span>
+              <span class="tech-pill">XGBoost</span>
+              <span class="tech-pill">SHAP</span>
+              <span class="tech-pill">Random Forest</span>
+              <span class="tech-pill">K-Means</span>
+              <span class="tech-pill">HDBSCAN</span>
+            </div>
+          </div>
+
+          <div class="tech-category-card">
+            <h3 class="tech-category-title">
+              <span style="color:#a855f7">●</span> Deep Learning &amp; NLP
+            </h3>
+            <div class="tech-chips-list">
+              <span class="tech-pill">TensorFlow</span>
+              <span class="tech-pill">IndicTrans2</span>
+              <span class="tech-pill">IndicConformer</span>
+              <span class="tech-pill">Piper TTS</span>
+              <span class="tech-pill">ONNX Runtime</span>
+              <span class="tech-pill">INT8</span>
+            </div>
+          </div>
+
+          <div class="tech-category-card">
+            <h3 class="tech-category-title">
+              <span style="color:#34d399">●</span> Data, 3D &amp; Apps
+            </h3>
+            <div class="tech-chips-list">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">pandas</span>
+              <span class="tech-pill">NumPy</span>
+              <span class="tech-pill">Streamlit</span>
+              <span class="tech-pill">Three.js</span>
+              <span class="tech-pill">Git / GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact" class="contact-section" aria-label="Contact and Collaboration">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="section-label">
+              <span class="pulse-dot"></span>
+              <span>GET IN TOUCH</span>
+            </div>
+
+            <h2 class="contact-headline">
+              Let&rsquo;s create something meaningful.
+            </h2>
+
+            <p class="contact-supporting">
+              I&rsquo;m interested in machine learning, intelligent applications, and connecting with people who enjoy solving challenging problems.
+            </p>
+
+            <div class="contact-channels">
+              <!-- GitHub -->
+              <a href="https://github.com/Atharva110409" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-item-left">
+                  <div class="contact-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="contact-item-title">GitHub</h4>
+                    <p class="contact-item-sub">github.com/Atharva110409</p>
+                  </div>
+                </div>
+                <span class="contact-copy-btn">VISIT &nearr;</span>
+              </a>
+
+              <!-- LinkedIn (Editable Placeholder) -->
+              <div class="contact-item">
+                <div class="contact-item-left">
+                  <div class="contact-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="contact-item-title">LinkedIn</h4>
+                    <p class="contact-item-sub">linkedin.com/in/atharva-gangurde</p>
+                  </div>
+                </div>
+                <button class="contact-copy-btn" data-copy="https://linkedin.com/in/atharva-gangurde">COPY LINK</button>
+              </div>
+
+              <!-- Email (Editable Placeholder) -->
+              <div class="contact-item">
+                <div class="contact-item-left">
+                  <div class="contact-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="contact-item-title">Direct Email</h4>
+                    <p class="contact-item-sub">atharva.gangurde@example.com</p>
+                  </div>
+                </div>
+                <button class="contact-copy-btn" data-copy="atharva.gangurde@example.com">COPY EMAIL</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Functional Contact Form -->
+          <div class="contact-form-card">
+            <div class="form-mode-badge">
+              <span class="badge-dot"></span>
+              <span>Direct Contact &bull; Generates pre-filled email to Atharva</span>
+            </div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Mercer" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="alex@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Hi Atharva, let's discuss a machine learning project..." required></textarea>
+              </div>
+
+              <div id="form-status-alert" class="form-status-alert" role="alert"></div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                <span>DISPATCH VIA EMAIL CLIENT</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p class="footer-copy">&copy; 2026 Atharva Gangurde. All rights reserved.</p>
+        <div class="footer-telemetry">
+          <span class="hud-status-dot"></span>
+          <span>SYSTEM ONLINE &bull; THREE.JS PIPELINES NOMINAL</span>
+        </div>
+      </div>
+
+      <a href="#hero" class="footer-back-to-top">
+        <span>BACK TO TOP</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: AYOVANI SYSTEM ARCHITECTURE INSPECTION
+       ========================================================================== -->
+  <div id="ayovani-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button id="ayovani-modal-close" class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <h3 id="modal-title" style="font-size:1.6rem; margin-bottom:0.8rem;">AYOVANI System Architecture</h3>
+      <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">
+        SIH 2026 Team Project: Technical breakdown of the edge-first speech translation pipeline engineered for low-resource tribal language education.
+      </p>
+
+      <div style="display:flex; flex-direction:column; gap:1.2rem; font-family:var(--font-mono); font-size:0.85rem;">
+        <div style="padding:1rem; background:rgba(255,255,255,0.03); border-radius:12px; border:1px solid var(--border-subtle);">
+          <strong style="color:var(--accent-blue);">1. Cross-Checked Data Engineering (Karya Corpus)</strong>
+          <p style="color:var(--text-dim); margin-top:0.3rem;">
+            20,000 raw Hindi&ndash;Mundari parallel sentence pairs cleaned and deduplicated to 19,910 clean pairs; expanded to 39,820 bidirectional training examples using direction tags (hin_Deva &harr; mun_Deva) with tokenizer extension (mun_Deva ID 122706).
+          </p>
+        </div>
+
+        <div style="padding:1rem; background:rgba(255,255,255,0.03); border-radius:12px; border:1px solid var(--border-subtle);">
+          <strong style="color:var(--accent-purple);">2. Single-Model Architecture &amp; QUInt8 ONNX Quantization</strong>
+          <p style="color:var(--text-dim); margin-top:0.3rem;">
+            Replaced dual unidirectional models (which hit 700 MB OOM) with a unified 320M IndicTrans2 engine. Dynamically quantized FP32 weights (1,224 MB) down to 115.99 MB QUInt8 ONNX, slashing active memory to 183&ndash;347 MB to clear the 400 MB RAM budget for 2 GB Android tablets.
+          </p>
+        </div>
+
+        <div style="padding:1rem; background:rgba(255,255,255,0.03); border-radius:12px; border:1px solid var(--border-subtle);">
+          <strong style="color:var(--accent-emerald);">3. Speech Pipeline &amp; Latency SLA</strong>
+          <p style="color:var(--text-dim); margin-top:0.3rem;">
+            STT powered by AI4Bharat IndicConformer (120M, INT8 ONNX, 2.37s CPU latency). TTS powered by fine-tuned Piper-VITS (18.4 MB INT8 ONNX, 0.08x Real-Time Factor). Concurrent clause-level streaming achieves 2.05s&ndash;2.45s Time-To-First-Audio with zero cloud dependency.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notice -->
+  <div id="toast-notice" class="toast-notice" role="status">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span class="toast-text">Copied to clipboard!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/three.min.js"></script>
+  <script src="js/hero-character.js"></script>
+  <script src="js/tech-spheres.js"></script>
+  <script src="js/fraud-viz.js"></script>
+  <script src="js/ayovani-viz.js"></script>
+  <script src="js/stellar-viz.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
